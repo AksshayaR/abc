@@ -1,2 +1,2 @@
 # requirements.txt
-mysql-connector-python==2.2.9
+mysql-connector-python==8.0.31
