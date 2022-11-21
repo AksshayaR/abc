@@ -1,4 +1,5 @@
 import mysql.connector
+import streamlit as st
 
 mydb = mysql.connector.connect(**st.secrets["mysql"])
 c = mydb.cursor()
