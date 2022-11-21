@@ -1,11 +1,6 @@
 import mysql.connector
 
-mydb = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="",
-    database="project"
-)
+mydb = mysql.connector.connect(**st.secrets["mysql"])
 c = mydb.cursor()
 
 
