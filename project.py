@@ -1,13 +1,13 @@
 import streamlit as st
 
-from create import create
-from database import create_table
-from delete import delete
+
+
+
 from see_customers import read
-from update import update
+from update_db import update_customer
 
 from check_in import check_in
-from check_out import check_out
+from check_out import delete
 
 
 
@@ -16,7 +16,7 @@ def main():
     menu = ["Check in", "View customers", "Edit customer Info", "check out"]
     choice = st.sidebar.selectbox("Menu", menu)
 
-    create_table()
+    
     if choice == "Check in":
         st.subheader("Enter customer Details:")
         check_in()
@@ -27,11 +27,11 @@ def main():
 
     elif choice == "Edit customers Info":
         st.subheader("Edited customers Details:")
-        update()
+        update_customer()
 
     elif choice == "check out":
         st.subheader("check out:")
-        check_out()
+        delete()
 
     else:
         st.subheader("About hotel")
